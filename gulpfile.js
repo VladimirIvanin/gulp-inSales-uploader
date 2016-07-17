@@ -11,7 +11,7 @@ var options = {
   http: false,
   root: 'my-shop',
   update: true,
-  backup: false
+  backup: true
 }
 
 var InsalesUploader = new insalesUp(options)
