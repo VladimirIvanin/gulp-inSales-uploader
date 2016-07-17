@@ -1,0 +1,29 @@
+{
+  "name": "insales-uploader-gulp-test",
+  "version": "0.1.0",
+  "description": "Пример использования insales-uploader с Gulp.js",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "insales-uploader": "^0.8.0",
+    "promise": "^7.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/brainmurder/InSales-uploader-gulp-test.git"
+  },
+  "keywords": [
+    "gulp",
+    "insales"
+  ],
+  "author": "Vladimir Ivanin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brainmurder/InSales-uploader-gulp-test/issues"
+  },
+  "homepage": "https://github.com/brainmurder/InSales-uploader-gulp-test#readme"
+}
