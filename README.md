@@ -33,7 +33,7 @@ gulp.task('download', function(){
   ])
 });
 
-// Задача запускает создание резервной копии (в настрйоках должно быть установлено - backup: true).
+// Задача запускает создание резервной копии (в настройках должно быть установлено - backup: true).
 gulp.task('backup', function(){
   return Promise.all([
     InsalesUploader.backup()
