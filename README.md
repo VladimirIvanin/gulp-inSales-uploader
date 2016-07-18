@@ -1,6 +1,6 @@
 # Gulp and InSales uploader
 
->**InSales uploader** позволяет локально работать с темами платформы [InSales](http://www.insales.ru/)
+>**[InSales uploader](https://github.com/brainmurder/insales-uploader)** позволяет локально работать с темами платформы [InSales](http://www.insales.ru/)
 
 ## Содержимое gulpfile.js
 
