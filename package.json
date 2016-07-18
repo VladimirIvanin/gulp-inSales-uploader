@@ -1,11 +1,11 @@
 {
   "name": "insales-uploader-gulp-test",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Пример использования insales-uploader с Gulp.js",
   "main": "index.js",
   "dependencies": {
     "gulp": "^3.9.1",
-    "insales-uploader": "^0.8.0",
+    "insales-uploader": "^0.1.1",
     "promise": "^7.1.1"
   },
   "devDependencies": {},
