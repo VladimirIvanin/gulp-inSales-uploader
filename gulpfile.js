@@ -1,7 +1,5 @@
 var gulp = require('gulp');
 var insalesUp = require('insales-uploader');
-var Promise = require('promise');
-
 
 var options = {
   id: '0123456798',
