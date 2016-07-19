@@ -53,6 +53,12 @@ gulp.task('default', ['download'], function() {
 + Запустить нужную задачу.
 + Переодически следить за обновлением пакета **[InSales uploader](https://github.com/brainmurder/insales-uploader)** (чтобы обновить пакет, в консоли нужно запустить `npm update`).
 
+## Видео по установке
+
++ [Создание ключа доступа](https://youtu.be/SSUdqtJFEYE)
++ [Установка npm пакетов](https://youtu.be/A8OkEZ_Vay0)
++ [Добавление настроек](https://youtu.be/OOdUPf7__g0)
+
 ### Установить пакеты через npm
 
 Установка пакетов производится из командной строки (должен быть установлен node.js).
