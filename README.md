@@ -51,6 +51,7 @@ gulp.task('default', ['download'], function() {
 + Установить пакеты через npm.
 + Отредактировать **options** в gulpfile.js в соответствии с вашим магазином.
 + Запустить нужную задачу.
++ Переодически следить за обновлением пакета **[InSales uploader](https://github.com/brainmurder/insales-uploader)** (чтобы обновить пакет, в консоли нужно запустить `npm update`).
 
 ### Установить пакеты через npm
 
