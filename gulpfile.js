@@ -17,25 +17,18 @@ var options = {
 var InsalesUploader = new insalesUp(options)
 
 gulp.task('download', function(){
-  return Promise.all([
-    InsalesUploader.download()
-  ])
-});
-
-gulp.task('backup', function(){
-  return Promise.all([
-    InsalesUploader.backup()
-  ])
+  return InsalesUploader.download()
 });
 
 gulp.task('stream', function(){
   return InsalesUploader.stream()
 });
 
-gulp.task('default', function() {
-  return Promise.all([
-    InsalesUploader.download().then(function () {
-      InsalesUploader.stream()
-    })
-  ])
+gulp.task('backup', function(){
+  return InsalesUploader.backup()
 });
+
+gulp.task('default', ['download'], function() {
+  return gulp.start('stream');
+});
+
