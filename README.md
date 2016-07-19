@@ -8,7 +8,6 @@
 // Подключение библиотек
 var gulp = require('gulp');
 var insalesUp = require('insales-uploader');
-var Promise = require('promise');
 
 // Настройки для InSales uploader
 var options = {
@@ -26,32 +25,22 @@ var options = {
 var InsalesUploader = new insalesUp(options)
 
 // Пример задачи для скачивания темы.
-// Метод InsalesUploader.download() обернут в Promise для корректной работы Gulp.js.
 gulp.task('download', function(){
-  return Promise.all([
-    InsalesUploader.download()
-  ])
+  return InsalesUploader.download()
 });
 
-// Задача запускает создание резервной копии (в настройках должно быть установлено - backup: true).
+// Задача запускает создание резервной копии.
 gulp.task('backup', function(){
-  return Promise.all([
-    InsalesUploader.backup()
-  ])
+  return InsalesUploader.backup()
 });
-
 // Задача запускает отслеживание изменений в файлах.
 gulp.task('stream', function(){
   return InsalesUploader.stream()
 });
 
 // Пример задачи поумолчанию, сначала запускается скачивание, после чего запускаем отслеживание изменений.
-gulp.task('default', function() {
-  return Promise.all([
-    InsalesUploader.download().then(function () {
-      InsalesUploader.stream()
-    })
-  ])
+gulp.task('default', ['download'], function() {
+  return gulp.start('stream');
 });
 ```
 
@@ -110,8 +99,6 @@ gulp
 ```
 
 После того как запустится задача с методом **stream**, все изменения в файлах будут применяться на сайте.
-
-> Удалять и добавлять файлы следует не более 10 за раз, в иных случаях возможны ошибки. (В будущих релизах будет исправлено)
 
 ### Структура папок
 
