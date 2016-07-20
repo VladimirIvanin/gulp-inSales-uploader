@@ -124,6 +124,12 @@ root/
     |-- snippets/
     |-- templates/
 ```
+## Возможные ошибки
+
++ Ошибка при создании сниппета. Сниппет создастся, но платформа может выдать ошибку.
+
+О проблема в работе пишите [сюда](https://github.com/brainmurder/InSales-uploader-gulp-test/issues)
+
 
 ## Ссылки
 
