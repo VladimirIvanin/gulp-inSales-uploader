@@ -35,6 +35,12 @@ gulp.task('download', function(){
 gulp.task('backup', function(){
   return InsalesUploader.backup()
 });
+
+// Задача вызывает загрузку темы в папку release с созданием архива.
+gulp.task('release', function(){
+  return InsalesUploader.release()
+});
+
 // Задача запускает отслеживание изменений в файлах.
 gulp.task('stream', function(){
   return InsalesUploader.stream()
