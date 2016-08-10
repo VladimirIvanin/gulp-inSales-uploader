@@ -1,11 +1,13 @@
 var gulp = require('gulp');
 var insalesUp = require('insales-uploader');
 
-var options = {
-  id: '0123456798',
-  token: '0123456798',
-  url: 'shop-41324.myinsales.ru',
-  http: false,
+var option = {
+  account: {
+    id: '0123456798',
+    token: '0123456798',
+    url: 'shop-41324.myinsales.ru',
+    http: false
+  },
   theme: {
     id: '123456',
     root: 'my-shop',
