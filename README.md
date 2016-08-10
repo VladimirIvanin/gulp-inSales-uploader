@@ -13,10 +13,12 @@ var insalesUp = require('insales-uploader');
 
 // Настройки для InSales uploader
 var option = {
-  id: '0123456798',
-  token: '0123456798',
-  url: 'shop-41324.myinsales.ru',
-  http: false,
+  account: {
+    id: '0123456798',
+    token: '0123456798',
+    url: 'shop-41324.myinsales.ru',
+    http: false
+  },
   theme: {
     id: '123456',
     root: 'my-shop',
@@ -130,14 +132,14 @@ root/
         |-- media/
         |-- style/
         |-- svg/
+    |-- config/
+    |-- snippets/
+    |-- templates/
     |-- backup/
         |-- config
         |-- media
         |-- snippets
         |-- templates
-    |-- config/
-    |-- snippets/
-    |-- templates/
 ```
 ## Возможные ошибки (ждут исправления)
 
