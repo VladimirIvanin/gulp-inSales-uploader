@@ -26,6 +26,10 @@ gulp.task('backup', function(){
   return InsalesUploader.backup()
 });
 
+gulp.task('release', function(){
+  return InsalesUploader.release()
+});
+
 gulp.task('default', ['download'], function() {
   return gulp.start('stream');
 });
