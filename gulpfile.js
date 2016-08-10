@@ -14,7 +14,7 @@ var option = {
     backup: 'zip',
     update: true,
     startBackup: true
-  },
+  }
 }
 
 var InsalesUploader = new insalesUp(options)
