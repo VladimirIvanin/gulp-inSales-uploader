@@ -44,7 +44,6 @@ gulp.task('backup-to-zip', function(){
   return InsalesUploader.backupToZip()
 });
 
-
 // Задача запускает отслеживание изменений в файлах.
 gulp.task('stream', function(){
   return InsalesUploader.stream()
