@@ -1,15 +1,18 @@
 var gulp = require('gulp');
 var insalesUp = require('insales-uploader');
 
-var options = {
+var option = {
   id: '0123456798',
   token: '0123456798',
   url: 'shop-41324.myinsales.ru',
-  theme: '123456',
   http: false,
-  root: 'my-shop',
-  update: true,
-  startBackup: true
+  theme: {
+    id: '123456',
+    root: 'my-shop',
+    backup: 'zip',
+    update: true,
+    startBackup: true
+  },
 }
 
 var InsalesUploader = new insalesUp(options)
@@ -24,6 +27,10 @@ gulp.task('stream', function(){
 
 gulp.task('backup', function(){
   return InsalesUploader.backup()
+});
+
+gulp.task('backup-to-zip', function(){
+  return InsalesUploader.backupToZip()
 });
 
 gulp.task('release', function(){
