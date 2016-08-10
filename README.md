@@ -12,15 +12,18 @@ var gulp = require('gulp');
 var insalesUp = require('insales-uploader');
 
 // Настройки для InSales uploader
-var options = {
+var option = {
   id: '0123456798',
   token: '0123456798',
   url: 'shop-41324.myinsales.ru',
-  theme: '123456',
   http: false,
-  root: 'my-shop',
-  update: true,
-  startBackup: true
+  theme: {
+    id: '123456',
+    root: 'my-shop',
+    backup: 'zip',
+    update: true,
+    startBackup: true
+  },
 }
 
 // Инициализация InSales uploader
@@ -36,10 +39,11 @@ gulp.task('backup', function(){
   return InsalesUploader.backup()
 });
 
-// Задача вызывает загрузку темы в папку release с созданием архива.
-gulp.task('release', function(){
-  return InsalesUploader.release()
+// Задача запускает создание резервной копии с созданием архива.
+gulp.task('backup-to-zip', function(){
+  return InsalesUploader.backupToZip()
 });
+
 
 // Задача запускает отслеживание изменений в файлах.
 gulp.task('stream', function(){
@@ -95,6 +99,7 @@ npm install
 * root — корнеевая папка для сохранения темы;
 * update — при значении 'true' локальные файлы будут перезаписываться при повторной загрузке;
 * startBackup — при значении 'true' во время загрузки темы через метод **download** в папке 'backup' будут сохранятся резервные копии темы.
+* backup — 'zip' или 'simple', если zip то создаются архивы.
 
 ### Запуск задач
 
@@ -127,15 +132,13 @@ root/
         |-- style/
         |-- svg/
     |-- backup/
-        |-- 2016-10-15-12-20
-    |-- config/
-    |-- snippets/
-    |-- templates/
-    |-- release/
         |-- config
         |-- media
         |-- snippets
         |-- templates
+    |-- config/
+    |-- snippets/
+    |-- templates/
 ```
 ## Возможные ошибки (ждут исправления)
 
