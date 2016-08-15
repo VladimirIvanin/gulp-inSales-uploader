@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var insalesUp = require('insales-uploader');
 
-var option = {
+var options = {
   account: {
     id: '0123456798',
     token: '0123456798',
