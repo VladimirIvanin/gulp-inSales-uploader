@@ -51,6 +51,11 @@ gulp.task('stream', function(){
   return InsalesUploader.stream()
 });
 
+// Задача запускает сортировку аcсетов из папки media в папку assets
+gulp.task('init-assets', function(){
+  return InsalesUploader.initAssets()
+});
+
 // Пример задачи поумолчанию, сначала запускается скачивание, после чего запускаем отслеживание изменений.
 gulp.task('default', ['download'], function() {
   return gulp.start('stream');
@@ -133,6 +138,7 @@ root/
         |-- style/
         |-- svg/
     |-- config/
+    |-- media/
     |-- snippets/
     |-- templates/
     |-- backup/
