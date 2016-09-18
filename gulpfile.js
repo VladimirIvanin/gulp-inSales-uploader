@@ -35,8 +35,8 @@ gulp.task('backup-to-zip', function(){
   return InsalesUploader.backupToZip()
 });
 
-gulp.task('release', function(){
-  return InsalesUploader.release()
+gulp.task('init-assets', function(){
+  return InsalesUploader.initAssets()
 });
 
 gulp.task('default', ['download'], function() {
