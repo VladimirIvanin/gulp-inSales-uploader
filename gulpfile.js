@@ -31,8 +31,8 @@ gulp.task('backup', function(){
   return InsalesUploader.backup()
 });
 
-gulp.task('backup-to-zip', function(){
-  return InsalesUploader.backupToZip()
+gulp.task('diff-assets', function(){
+  return InsalesUploader.diffLocalAssets()
 });
 
 gulp.task('init-assets', function(){
