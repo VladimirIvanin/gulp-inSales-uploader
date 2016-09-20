@@ -22,7 +22,6 @@ var options = {
   theme: {
     id: '123456',
     root: 'my-shop',
-    backup: 'zip',
     update: true,
     startBackup: true
   }
@@ -36,14 +35,9 @@ gulp.task('download', function(){
   return InsalesUploader.download()
 });
 
-// Задача запускает создание резервной копии.
+// Задача запускает создание резервной копии с созданием архива.
 gulp.task('backup', function(){
   return InsalesUploader.backup()
-});
-
-// Задача запускает создание резервной копии с созданием архива.
-gulp.task('backup-to-zip', function(){
-  return InsalesUploader.backupToZip()
 });
 
 // Задача запускает отслеживание изменений в файлах.
@@ -105,7 +99,6 @@ npm install
 * root — корнеевая папка для сохранения темы;
 * update — при значении 'true' локальные файлы будут перезаписываться при повторной загрузке;
 * startBackup — при значении 'true' во время загрузки темы через метод **download** в папке 'backup' будут сохранятся резервные копии темы.
-* backup — 'zip' или 'simple', если zip то создаются архивы.
 
 ### Запуск задач
 
@@ -142,10 +135,6 @@ root/
     |-- snippets/
     |-- templates/
     |-- backup/
-        |-- config
-        |-- media
-        |-- snippets
-        |-- templates
 ```
 ## Возможные ошибки (ждут исправления)
 
