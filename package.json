@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "gulp": "^3.9.1",
-    "insales-uploader": ">=0.18.7",
+    "insales-uploader": ">=0.18.10",
     "promise": "^7.1.1"
   },
   "devDependencies": {},
