@@ -50,6 +50,11 @@ gulp.task('init-assets', function(){
   return InsalesUploader.initAssets()
 });
 
+// Задача запускает сравнивание списка файлов на сервере со списком в локальной копии
+gulp.task('diff-assets', function(){
+  return InsalesUploader.diffLocalAssets()
+});
+
 // Пример задачи поумолчанию, сначала запускается скачивание, после чего запускаем отслеживание изменений.
 gulp.task('default', ['download'], function() {
   return gulp.start('stream');
