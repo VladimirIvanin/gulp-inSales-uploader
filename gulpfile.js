@@ -17,8 +17,7 @@ var options = {
   },
   tools:{
     openBrowser: {
-      start: true,
-      app: 'firefox'
+      start: true
     }
   }
 }
