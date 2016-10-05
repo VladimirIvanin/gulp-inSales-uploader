@@ -14,6 +14,12 @@ var options = {
     backup: 'zip',
     update: true,
     startBackup: true
+  },
+  tools:{
+    openBrowser: {
+      start: true,
+      app: 'firefox'
+    }
   }
 }
 
@@ -37,6 +43,10 @@ gulp.task('diff-assets', function(){
 
 gulp.task('init-assets', function(){
   return InsalesUploader.initAssets()
+});
+
+gulp.task('open-browser', function(){
+  return InsalesUploader.openBrowser()
 });
 
 gulp.task('default', ['download'], function() {
