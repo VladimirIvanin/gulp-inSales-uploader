@@ -19,6 +19,9 @@ var options = {
     openBrowser: {
       start: true
     }
+    browserSync: {
+      start: true
+    }
   }
 }
 
@@ -42,6 +45,12 @@ gulp.task('diff-assets', function(){
 
 gulp.task('init-assets', function(){
   return InsalesUploader.initAssets()
+});
+
+gulp.task('upload', function(){
+  return InsalesUploader.upload({
+    update: false
+  })
 });
 
 gulp.task('open-browser', function(){
