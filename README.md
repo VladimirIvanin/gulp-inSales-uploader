@@ -17,7 +17,7 @@ var options = {
     id: '0123456798',
     token: '0123456798',
     url: 'shop-41324.myinsales.ru',
-    http: false
+    http: true
   },
   theme: {
     id: '123456',
