@@ -18,9 +18,9 @@ var options = {
   tools:{
     openBrowser: {
       start: true
-    }
+    },
     browserSync: {
-      start: true
+      start: false
     }
   }
 }
@@ -49,7 +49,7 @@ gulp.task('init-assets', function(){
 
 gulp.task('upload', function(){
   return InsalesUploader.upload({
-    update: false
+    update: true
   })
 });
 
