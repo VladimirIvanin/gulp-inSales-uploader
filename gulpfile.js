@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var insalesUp = require('insales-uploader');
+var watch = require('gulp-watch');
 
 var options = {
   account: {
@@ -33,6 +34,12 @@ gulp.task('download', function(){
 
 gulp.task('stream', function(){
   return InsalesUploader.stream()
+});
+
+gulp.task('watch', function(){
+  return watch(InsalesUploader.paths.toWatch, function (_vinyl) {
+    InsalesUploader.triggerFile(_vinyl.event, _vinyl.path);
+  });
 });
 
 gulp.task('backup', function(){
