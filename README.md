@@ -10,6 +10,7 @@
 // Подключение библиотек
 var gulp = require('gulp');
 var insalesUp = require('insales-uploader');
+var watch = require('gulp-watch');
 
 // Настройки для InSales uploader
 var options = {
@@ -59,6 +60,13 @@ gulp.task('backup', function(){
 // Задача запускает отслеживание изменений в файлах.
 gulp.task('stream', function(){
   return InsalesUploader.stream()
+});
+
+// Задача запускает отслеживание изменений в файлах с помощью пакета gulp-watch
+gulp.task('watch', function(){
+  return watch(InsalesUploader.paths.toWatch, function (_vinyl) {
+    InsalesUploader.triggerFile(_vinyl.event, _vinyl.path);
+  });
 });
 
 // Задача запускает сортировку аcсетов из папки media в папку assets
