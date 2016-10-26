@@ -18,10 +18,10 @@ var options = {
   },
   tools:{
     openBrowser: {
-      start: true
+      start: false
     },
     browserSync: {
-      start: false
+      start: true
     }
   }
 }
