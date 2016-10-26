@@ -32,6 +32,14 @@ gulp.task('download', function(){
   return InsalesUploader.download()
 });
 
+gulp.task('pull', function(){
+  return InsalesUploader.pullTheme()
+});
+
+gulp.task('push', function(){
+  return InsalesUploader.pushTheme()
+});
+
 gulp.task('stream', function(){
   return InsalesUploader.stream()
 });
