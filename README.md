@@ -1,5 +1,7 @@
 # Gulp and InSales uploader
 
+Сборка для работы с InSales uploader по средствам Gulp.js
+
 >**[InSales uploader](https://github.com/brainmurder/insales-uploader)** позволяет локально работать с темами платформы [InSales](http://www.insales.ru/)
 
 [![npm version](https://badge.fury.io/js/insales-uploader.svg)](https://badge.fury.io/js/insales-uploader)
