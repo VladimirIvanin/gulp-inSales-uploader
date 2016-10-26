@@ -52,6 +52,16 @@ gulp.task('upload', function(){
   })
 });
 
+//  загрузка темы на компьютер. Перед началом загрузки, все локальные файлы удаляются
+gulp.task('pull', function(){
+  return InsalesUploader.pullTheme()
+});
+
+// загрузка темы на сервер с полным обновлением файлов. 
+gulp.task('push', function(){
+  return InsalesUploader.pushTheme()
+});
+
 // Задача запускает создание резервной копии с созданием архива.
 gulp.task('backup', function(){
   return InsalesUploader.backup()
