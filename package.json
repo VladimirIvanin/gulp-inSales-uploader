@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "gulp": "^3.9.1",
+    "gulp-cli": "^1.2.2",
     "insales-uploader": ">=0.20.7",
     "gulp-watch": "^4.3.10",
     "promise": "^7.1.1"
