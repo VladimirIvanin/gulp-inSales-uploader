@@ -194,9 +194,6 @@ root/
     |-- templates/
     |-- backup/
 ```
-## Возможные ошибки (ждут исправления)
-
-+ скачивание темы останавливается без уведомления об ошибке
 
 О проблемах в работе пишите [сюда](https://github.com/brainmurder/InSales-uploader-gulp-test/issues)
 
