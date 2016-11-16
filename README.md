@@ -200,6 +200,11 @@ root/
 
 ## Ссылки
 
+### Разработка тем InSales
+
+- [Расширенная документация](http://liquidhub.ru/)
+- [Утилиты для разработки тем](https://github.com/VladimirIvanin/devu)
+
 ### Node.js
 
 * [Дистрибутив Node.js](https://nodejs.org/en/download/)
