@@ -12,16 +12,29 @@ var options = {
   theme: {
     id: '123456',
     root: 'my-shop',
-    backup: 'zip',
     update: true,
+    excludeFiles: ['**/*.DS_Store', '**/*.log'],
     startBackup: true
   },
   tools:{
+    debugMode: false,
     openBrowser: {
-      start: false
+      start: true,
+      app: 'firefox'
     },
     browserSync: {
-      start: true
+      start: false,
+      uploadRestart: false,
+      browser: 'firefox'
+    },
+    stylelint: {
+      use: true,
+      stopOnFail: true,
+      config: {
+        "rules": {
+          "property-no-unknown": true,
+        }
+      }
     }
   }
 }
