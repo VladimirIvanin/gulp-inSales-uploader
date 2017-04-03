@@ -32,7 +32,7 @@ var options = {
       stopOnFail: true,
       config: {
         "rules": {
-          "property-no-unknown": true,
+          "property-no-unknown": true
         }
       }
     }
