@@ -40,6 +40,17 @@ var options = {
       uploadRestart: false,
       browser: 'firefox'
     },
+    autoprefixer: {
+      use: true,
+      config: {
+          browsers: ['last 21 versions'],
+          cascade: true
+      }
+    },
+    eslint: {
+      use: true,
+      stopOnFail: true
+    },
     stylelint: {
       use: true,
       stopOnFail: true,
@@ -167,8 +178,9 @@ npm install
 * browserSync — синхронизация браузера и изменений в файлах. Синхронизация включается при запуске метода `stream`. Поумолчанию перезагрузка браузера отключена для загружаемых файлов, перезагрузка срабатывает на изменение и удаление. Так же можно указать доп. параметры согласно api [browsersync](https://www.browsersync.io/docs/options). `Возможен редирект на основной домен, в этом случае в конфиге попробуйте указать основной домен.
 * openBrowser — открытие браузера при запуске метода `stream`. Чтобы включить данную опцию, в объект свойства нужно добавить `start: true`. Будет открыт браузер поумолчанию. Для старта сайта в определенном браузере, нужно добавить свойство `app`. Свойство `app` специфично работает в разных операционных системах, например чтобы открыть `Chrome`, пользователям MacOs нужно указать `google chrome`, пользователям Linux `google-chrome`, пользователям Windows `chrome`.
 * debugMode — логирование операций.
-* stylelint — линтер стилей, можно добавлять свои настройки согласно api [stylelint](https://stylelint.io/user-guide/rules/). `use` - использовать линтер? `stopOnFail` - останавливать отправление файла на сервер при ошибках? 
-
+* stylelint — линтер стилей, можно добавлять свои настройки согласно api [stylelint](https://stylelint.io/user-guide/rules/). `use` - использовать линтер? `stopOnFail` - останавливать отправление файла на сервер при ошибках?
+* autoprefixer — добавление префиксов к стилям, можно добавлять свои настройки согласно api [autoprefixer](https://github.com/postcss/autoprefixer). `use` - использовать autoprefixer?
+* eslint — js линтер, можно добавлять свои настройки согласно api [ESLint ](http://eslint.org/docs/rules/). `use` - использовать ESLint?
 
 ### Запуск задач
 
