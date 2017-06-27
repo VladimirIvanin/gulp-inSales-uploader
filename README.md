@@ -242,3 +242,10 @@ root/
 * [Сайт Gulp.js](http://gulpjs.com/)
 * [Базовый курс по Gulp](http://loftblog.ru/material/gulp-js-rabotaem-s-css-concat-minify-rename-notify-watch-dest/)
 * [Сринкаст по Gulp](https://learn.javascript.ru/screencast/gulp)
+
+### Плагины для InSales
+
+- [Избранное](https://github.com/VladimirIvanin/favorites)
+- [Отправка сообщений](https://github.com/VladimirIvanin/InSalesFeedback)
+- [Ранее просмотренные товары](https://github.com/VladimirIvanin/RecentlyView)
+- [Определение местоположения пользователя](https://github.com/VladimirIvanin/geoManager)
