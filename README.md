@@ -1,4 +1,4 @@
-# Gulp конфиг для запуска методов пакета [InSales uploader]
+  # Gulp конфиг для запуска методов InSales uploader
 
 >**[InSales uploader](https://github.com/brainmurder/insales-uploader)** позволяет локально работать с темами платформы [InSales](http://www.insales.ru/)
 
