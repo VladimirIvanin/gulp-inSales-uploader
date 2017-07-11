@@ -2,6 +2,8 @@
 
 >**[InSales uploader](https://github.com/brainmurder/insales-uploader)** позволяет локально работать с темами платформы [InSales](http://www.insales.ru/)
 
+> Для разработки шаблонов используйте [insales-template-builder](https://github.com/VladimirIvanin/insales-template-builder)
+
 *   [Содержимое gulpfile.js](#Содержимое-gulpfilejs)
 *   [Как начать работать](#Как-начать-работать)
 *   [Видео по установке](#Видео-по-установке)
