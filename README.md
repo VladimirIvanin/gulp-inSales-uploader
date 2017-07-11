@@ -2,6 +2,14 @@
 
 >**[InSales uploader](https://github.com/brainmurder/insales-uploader)** позволяет локально работать с темами платформы [InSales](http://www.insales.ru/)
 
+*   [Содержимое gulpfile.js](#Содержимое-gulpfilejs)
+*   [Как начать работать](#Как-начать-работать)
+*   [Видео по установке](#Видео-по-установке)
+*   [Настройки](#options)
+*   [Запуск задач](#Запуск-задач)
+*   [Структура папок](#Структура-папок)
+*   [Ссылки](#Ссылки)
+
 [![npm version](https://badge.fury.io/js/insales-uploader.svg)](https://badge.fury.io/js/insales-uploader)
 
 ## Содержимое gulpfile.js
