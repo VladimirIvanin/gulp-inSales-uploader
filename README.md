@@ -237,7 +237,7 @@ root/
 ### Разработка тем InSales
 
 - [Расширенная документация](http://liquidhub.ru/)
-- [Утилиты для разработки тем](https://github.com/VladimirIvanin/devu)
+- [Сборщик шаблонов](https://github.com/VladimirIvanin/insales-template-builder)
 
 ### Node.js
 
@@ -251,7 +251,6 @@ root/
 
 ### Полезные ссылки
 
-- [Сборщик шаблонов для InSales](https://github.com/VladimirIvanin/insales-template-builder)
 - [Избранное](https://github.com/VladimirIvanin/favorites)
 - [Отправка сообщений](https://github.com/VladimirIvanin/InSalesFeedback)
 - [Плагин для обновления информации товара](https://github.com/VladimirIvanin/variantsModifier)
