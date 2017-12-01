@@ -19,13 +19,11 @@ var options = {
   tools:{
     debugMode: false,
     openBrowser: {
-      start: true,
-      app: 'firefox'
+      start: true
     },
     browserSync: {
       start: false,
-      uploadRestart: false,
-      browser: 'firefox'
+      uploadRestart: false
     },
     stylelint: {
       use: true,
