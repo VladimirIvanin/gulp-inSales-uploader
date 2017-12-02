@@ -38,6 +38,7 @@ var options = {
     startBackup: true
   },
   tools:{
+    postCssPlugins: [], // [require('postcss-discard-duplicates')(), require('postcss-combine-duplicated-selectors')()]
     debugMode: false,
     openBrowser: {
       start: true,
@@ -255,6 +256,8 @@ root/
 
 - [Избранное](https://github.com/VladimirIvanin/favorites)
 - [Отправка сообщений](https://github.com/VladimirIvanin/InSalesFeedback)
+- [Работа со сравнением](https://github.com/VladimirIvanin/CompareProducts)
+- [Обновление информации в корзине](https://github.com/VladimirIvanin/CartMan)
 - [Плагин для обновления информации товара](https://github.com/VladimirIvanin/variantsModifier)
 - [Ранее просмотренные товары](https://github.com/VladimirIvanin/RecentlyView)
 - [Определение местоположения пользователя](https://github.com/VladimirIvanin/geoManager)
