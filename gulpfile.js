@@ -17,6 +17,7 @@ var options = {
     startBackup: true
   },
   tools:{
+    postCssPlugins: [], // [require('postcss-discard-duplicates')(), require('postcss-combine-duplicated-selectors')()]
     debugMode: false,
     openBrowser: {
       start: true
