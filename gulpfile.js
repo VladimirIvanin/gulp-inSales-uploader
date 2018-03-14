@@ -1,42 +1,7 @@
 var gulp = require('gulp');
 var insalesUp = require('insales-uploader');
-var watch = require('gulp-watch');
-
-var options = {
-  account: {
-    id: '0123456798',
-    token: '0123456798',
-    url: 'shop-41324.myinsales.ru',
-    http: true
-  },
-  theme: {
-    id: '123456',
-    root: 'my-shop',
-    update: true,
-    excludeFiles: ['**/*.DS_Store', '**/*.log'],
-    startBackup: true
-  },
-  tools:{
-    postCssPlugins: [], // [require('postcss-discard-duplicates')(), require('postcss-combine-duplicated-selectors')()]
-    debugMode: false,
-    openBrowser: {
-      start: true
-    },
-    browserSync: {
-      start: false,
-      uploadRestart: false
-    },
-    stylelint: {
-      use: true,
-      stopOnFail: true,
-      config: {
-        "rules": {
-          "property-no-unknown": true
-        }
-      }
-    }
-  }
-}
+var options = require('./options');
+var autoprefixer = require('gulp-autoprefixer');
 
 var InsalesUploader = new insalesUp(options)
 
@@ -45,11 +10,11 @@ gulp.task('download', function(){
 });
 
 gulp.task('pull', function(){
-  return InsalesUploader.pullTheme()
+  return InsalesUploader.pull()
 });
 
 gulp.task('push', function(){
-  return InsalesUploader.pushTheme()
+  return InsalesUploader.upload()
 });
 
 gulp.task('stream', function(){
@@ -57,8 +22,58 @@ gulp.task('stream', function(){
 });
 
 gulp.task('watch', function(){
-  return watch(InsalesUploader.paths.toWatch, function (_vinyl) {
-    InsalesUploader.triggerFile(_vinyl.event, _vinyl.path);
+  InsalesUploader.watch(InsalesUploader.paths.script).on('all', function(event, path) {
+    return InsalesUploader.src(path)
+            .pipe(InsalesUploader.dest())
+  });
+
+  InsalesUploader.watch(InsalesUploader.paths.img).on('all', function(event, path) {
+    return InsalesUploader.src(path)
+            .pipe(InsalesUploader.dest())
+  });
+
+  InsalesUploader.watch(InsalesUploader.paths.style).on('all', function(event, path) {
+    return InsalesUploader.src(path)
+            .pipe(autoprefixer({
+                browsers: ['last 10 versions'],
+                cascade: false
+            }))
+            .pipe(InsalesUploader.dest())
+  });
+
+  InsalesUploader.watch(InsalesUploader.paths.svg).on('all', function(event, path) {
+    return InsalesUploader.src(path)
+            .pipe(InsalesUploader.dest())
+  });
+
+  InsalesUploader.watch(InsalesUploader.paths.assetsMedia).on('all', function(event, path) {
+    return InsalesUploader.src(path)
+            .pipe(InsalesUploader.dest())
+  });
+
+  InsalesUploader.watch(InsalesUploader.paths.fonts).on('all', function(event, path) {
+    return InsalesUploader.src(path)
+            .pipe(InsalesUploader.dest())
+  });
+
+  InsalesUploader.watch(InsalesUploader.paths.media).on('all', function(event, path) {
+    return InsalesUploader.src(path)
+            .pipe(InsalesUploader.dest())
+  });
+
+  InsalesUploader.watch(InsalesUploader.paths.snippets).on('all', function(event, path) {
+    return InsalesUploader.src(path)
+            .pipe(InsalesUploader.dest())
+  });
+
+  return InsalesUploader.watch(InsalesUploader.paths.templates).on('all', function(event, path) {
+    return InsalesUploader.src(path)
+            .pipe(InsalesUploader.dest())
+  });
+
+  InsalesUploader.watch(InsalesUploader.paths.config).on('all', function(event, path) {
+    return InsalesUploader.src(path)
+            .pipe(InsalesUploader.dest())
   });
 });
 
@@ -66,25 +81,10 @@ gulp.task('backup', function(){
   return InsalesUploader.backup()
 });
 
-gulp.task('diff-assets', function(){
-  return InsalesUploader.diffLocalAssets()
-});
-
 gulp.task('init-assets', function(){
   return InsalesUploader.initAssets()
 });
 
-gulp.task('upload', function(){
-  return InsalesUploader.upload({
-    update: true
-  })
+gulp.task('default', function(){
+  return InsalesUploader.start()
 });
-
-gulp.task('open-browser', function(){
-  return InsalesUploader.openBrowser()
-});
-
-gulp.task('default', ['download'], function() {
-  return gulp.start('stream');
-});
-
