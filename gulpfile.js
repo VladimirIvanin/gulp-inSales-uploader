@@ -3,88 +3,88 @@ var insalesUp = require('insales-uploader');
 var options = require('./options');
 var autoprefixer = require('gulp-autoprefixer');
 
-var InsalesUploader = new insalesUp(options)
+var IU = new insalesUp(options)
 
 gulp.task('download', function(){
-  return InsalesUploader.download()
+  return IU.download()
 });
 
 gulp.task('pull', function(){
-  return InsalesUploader.pull()
+  return IU.pull()
 });
 
 gulp.task('push', function(){
-  return InsalesUploader.upload()
+  return IU.upload()
 });
 
 gulp.task('stream', function(){
-  return InsalesUploader.stream()
+  return IU.stream()
 });
 
 gulp.task('watch', function(){
-  InsalesUploader.watch(InsalesUploader.paths.script).on('all', function(event, path) {
-    return InsalesUploader.src(path)
-            .pipe(InsalesUploader.dest())
+  IU.watch(IU.paths.script, function(stream) {
+    return stream
+            .pipe(IU.dest())
   });
 
-  InsalesUploader.watch(InsalesUploader.paths.img).on('all', function(event, path) {
-    return InsalesUploader.src(path)
-            .pipe(InsalesUploader.dest())
+  IU.watch(IU.paths.img, function(stream) {
+    return stream
+            .pipe(IU.dest())
   });
 
-  InsalesUploader.watch(InsalesUploader.paths.style).on('all', function(event, path) {
-    return InsalesUploader.src(path)
+  IU.watch(IU.paths.style, function(stream) {
+    return stream
             .pipe(autoprefixer({
                 browsers: ['last 10 versions'],
                 cascade: false
             }))
-            .pipe(InsalesUploader.dest())
+            .pipe(IU.dest())
   });
 
-  InsalesUploader.watch(InsalesUploader.paths.svg).on('all', function(event, path) {
-    return InsalesUploader.src(path)
-            .pipe(InsalesUploader.dest())
+  IU.watch(IU.paths.svg, function(stream) {
+    return stream
+            .pipe(IU.dest())
   });
 
-  InsalesUploader.watch(InsalesUploader.paths.assetsMedia).on('all', function(event, path) {
-    return InsalesUploader.src(path)
-            .pipe(InsalesUploader.dest())
+  IU.watch(IU.paths.assetsMedia, function(stream) {
+    return stream
+            .pipe(IU.dest())
   });
 
-  InsalesUploader.watch(InsalesUploader.paths.fonts).on('all', function(event, path) {
-    return InsalesUploader.src(path)
-            .pipe(InsalesUploader.dest())
+  IU.watch(IU.paths.fonts, function(stream) {
+    return stream
+            .pipe(IU.dest())
   });
 
-  InsalesUploader.watch(InsalesUploader.paths.media).on('all', function(event, path) {
-    return InsalesUploader.src(path)
-            .pipe(InsalesUploader.dest())
+  IU.watch(IU.paths.media, function(stream) {
+    return stream
+            .pipe(IU.dest())
   });
 
-  InsalesUploader.watch(InsalesUploader.paths.snippets).on('all', function(event, path) {
-    return InsalesUploader.src(path)
-            .pipe(InsalesUploader.dest())
+  IU.watch(IU.paths.snippets, function(stream) {
+    return stream
+            .pipe(IU.dest())
   });
 
-  return InsalesUploader.watch(InsalesUploader.paths.templates).on('all', function(event, path) {
-    return InsalesUploader.src(path)
-            .pipe(InsalesUploader.dest())
+  return IU.watch(IU.paths.templates, function(stream) {
+    return stream
+            .pipe(IU.dest())
   });
 
-  InsalesUploader.watch(InsalesUploader.paths.config).on('all', function(event, path) {
-    return InsalesUploader.src(path)
-            .pipe(InsalesUploader.dest())
+  IU.watch(IU.paths.config, function(stream) {
+    return stream
+            .pipe(IU.dest())
   });
 });
 
 gulp.task('backup', function(){
-  return InsalesUploader.backup()
+  return IU.backup()
 });
 
 gulp.task('init-assets', function(){
-  return InsalesUploader.initAssets()
+  return IU.initAssets()
 });
 
 gulp.task('default', function(){
-  return InsalesUploader.start()
+  return IU.start()
 });
