@@ -19,8 +19,10 @@ gulp.task('push', function(){
 });
 
 gulp.task('stream', function(){
-  return IU.stream()
-});
+  return IU.stream(function () {
+  	// Здесь можно юзать browsersync
+  })
+})
 
 gulp.task('watch', function(){
   IU.watch(IU.paths.script, function(stream) {
