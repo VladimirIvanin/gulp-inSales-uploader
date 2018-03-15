@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var insalesUp = require('insales-uploader');
 var options = require('./options');
 var autoprefixer = require('gulp-autoprefixer');
+var imagemin = require('gulp-imagemin');
 
 var IU = new insalesUp(options)
 
@@ -29,6 +30,7 @@ gulp.task('watch', function(){
 
   IU.watch(IU.paths.img, function(stream) {
     return stream
+            .pipe(imagemin())
             .pipe(IU.dest())
   });
 
