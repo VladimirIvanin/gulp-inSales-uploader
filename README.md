@@ -1,6 +1,6 @@
   # Gulp конфиг для запуска методов InSales uploader
 
->**[InSales uploader](https://github.com/brainmurder/insales-uploader)** позволяет локально работать с темами платформы [InSales](http://www.insales.ru/)
+>**[InSales uploader](https://github.com/insales/insales-uploader)** позволяет локально работать с темами платформы [InSales](http://www.insales.ru/)
 
 *   [Как начать работать](#Как-начать-работать)
 *   [Видео по установке](#Видео-по-установке)
