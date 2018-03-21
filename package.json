@@ -7,7 +7,7 @@
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-imagemin": "^4.1.0",
-    "insales-uploader": "^1.5.0"
+    "insales-uploader": "^1.6.1"
   },
   "devDependencies": {},
   "scripts": {
