@@ -5,9 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "gulp": "^3.9.1",
-    "autoprefixer": "^8.2.0",
-    "gulp-postcss": "^7.0.1",
-    "postcss-scss": "^1.0.4",
+    "insales-uploader-autoprefixer": "^1.0.1",
     "gulp-imagemin": "^4.1.0",
     "insales-uploader": "^1.7.1"
   },
