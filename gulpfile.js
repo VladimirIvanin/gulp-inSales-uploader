@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var insalesUp = require('insales-uploader');
 var options = require('./options');
-var autoprefixer = require('gulp-autoprefixer');
+var postcss = require('gulp-postcss')
 var imagemin = require('gulp-imagemin');
 
 var IU = new insalesUp(options)
@@ -38,9 +38,8 @@ gulp.task('watch', function(){
 
   IU.watch(IU.paths.style, function(stream) {
     return stream
-            .pipe(autoprefixer({
-                browsers: ['last 10 versions'],
-                cascade: false
+            .pipe(postcss().on('error',  function (err) {
+              console.log(err.message)
             }))
             .pipe(IU.dest())
   });
