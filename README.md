@@ -105,10 +105,11 @@ root/
 
 ## Ссылки
 
+- [Домашняя страница модуля insales-uploader](https://insales.github.io/insales-uploader/)
+
 ### Разработка тем InSales
 
 - [Расширенная документация](http://liquidhub.ru/)
-- [Сборщик шаблонов](https://github.com/VladimirIvanin/insales-template-builder)
 
 ### Node.js
 
