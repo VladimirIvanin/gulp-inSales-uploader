@@ -4,10 +4,11 @@
   "description": "Gulp конфиг для запуска методов InSales uploader",
   "main": "index.js",
   "dependencies": {
+    "browser-sync": "^2.23.6",
     "gulp": "^3.9.1",
-    "insales-uploader-autoprefixer": "^1.0.1",
     "gulp-imagemin": "^4.1.0",
-    "insales-uploader": "^1.8.8"
+    "insales-uploader": "^1.8.8",
+    "insales-uploader-autoprefixer": "^1.0.1"
   },
   "devDependencies": {},
   "scripts": {
