@@ -59,6 +59,7 @@ gulp.task('stream', function(){
 })
 
 gulp.task('watch', function(){
+  // для минификации используйте https://www.npmjs.com/package/gulp-uglify
   IU.watch(IU.paths.script, function(stream) {
     return stream
             .pipe(IU.dest())
