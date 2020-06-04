@@ -11,6 +11,10 @@ gulp.task('download', function(){
   return IU.download()
 });
 
+gulp.task('listThemes', function(){
+  return IU.listThemes()
+});
+
 gulp.task('downloadTemplates', function(){
   return IU.downloadTemplates()
 });
